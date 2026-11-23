@@ -8,7 +8,7 @@ The [pitch and drawing](docs/pitches/car-drive/pitch--car-movements.md) describe
 first playable experiment; [architecture](docs/architecture/README.md) describes
 its implementation. Cars and road are drawn procedurally, with no external assets.
 
-Play it in a desktop browser at <https://2raben.github.io/carrrgh/>, or build it
+Play it in a desktop browser at <https://waldstatt-lab.github.io/carrrgh/>, or build it
 natively as described below.
 
 ## How to play

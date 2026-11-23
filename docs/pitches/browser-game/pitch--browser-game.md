@@ -3,7 +3,7 @@
 Car Drive only runs as a native program. To try it, a friend needs Rust, the
 pinned toolchain, Clang and on NixOS a `nix-shell`, and has to build the game
 first. Nobody can just follow a link and drive. Its sibling
-[Moto Devil](https://github.com/2raben/moto-devil) already does exactly that: it
+[Moto Devil](https://github.com/waldstatt-lab/moto-devil) already does exactly that: it
 is published as a browser game on GitHub Pages.
 
 A browser build without a save would lose most of what makes Car Drive more than
@@ -39,7 +39,7 @@ browser: same road, traffic, vehicles, garage and keys. Native play, the SQLite
 save and the private network market stay as they are.
 
 The approach follows Moto Devil's
-[browser game pitch](https://github.com/2raben/moto-devil/blob/main/docs/pitches/browser-game/pitch--browser-game.md)
+[browser game pitch](https://github.com/waldstatt-lab/moto-devil/blob/main/docs/pitches/browser-game/pitch--browser-game.md)
 and its ADR 0010 wherever the two games are alike: page, build tasks, CI and
 Pages. Car Drive differs in what it saves. It has transactions instead of two
 texts, so the store is shaped differently.
@@ -141,7 +141,7 @@ Source: [pitch--browser-game.storage.excalidraw](pitch--browser-game.storage.exc
   publication runs at a time; a newer one replaces a running one.
 - **Once, by hand:** make the repository public, and select "GitHub Actions" as
   the Pages source in the repository settings. The page will be at
-  `https://2raben.github.io/carrrgh/`.
+  `https://waldstatt-lab.github.io/carrrgh/`.
 - `CONTRIBUTING.md` and the architecture documentation then describe CI, the web
   build and publishing. The sentence "There are no CI workflows yet" goes.
 
@@ -165,8 +165,8 @@ Source: [pitch--browser-game.storage.excalidraw](pitch--browser-game.storage.exc
   Its size is checked before parsing. It is decoded defensively and validated
   completely, as described above. An unusable document is moved aside to
   `car-drive/save.broken` and never used.
-- **Shared origin.** All project pages of the `2raben` account share the origin
-  `https://2raben.github.io`, and with it `localStorage`. Moto Devil
+- **Shared origin.** All project pages of the `waldstatt-lab` account share the origin
+  `https://waldstatt-lab.github.io`, and with it `localStorage`. Moto Devil
   already lives there. Other pages of the account can read and change Car
   Drive's save, for example to raise the coins. This is accepted. ADR 0007
   already treats the local save as editable, the browser market is local to
