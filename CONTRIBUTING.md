@@ -81,7 +81,7 @@ mise run web:serve   # builds dist/web and serves http://127.0.0.1:8080
 CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs `mise run check`
 and Clippy for `wasm32` on every pull request. Every push to `main` runs
 [.github/workflows/pages.yml](.github/workflows/pages.yml): `mise run web:build`,
-then publishing `dist/web` to GitHub Pages at <https://waldstatt-lab.github.io/carrrgh/>.
+then publishing `dist/web` to GitHub Pages at <https://waldstatt-lab.ch/carrrgh/>.
 Pages must use "GitHub Actions" as its source in the repository settings. The
 workflows have read-only rights by default; only the publish job may write Pages.
 
